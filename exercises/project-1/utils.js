@@ -66,10 +66,10 @@ export const startWebcam = (video) => {
 export const takePicture = (video, callback) => {
   const predictButton = document.getElementById("predict");
   const canvas = document.getElementById("canvas");
-  // const width = 320; // We will scale the photo width to this
-  // const height = 185;
-  const width = IMAGE_SIZE; // We will scale the photo width to this
-  const height = IMAGE_SIZE;
+  const width = 320; // We will scale the photo width to this
+  const height = 185;
+  // const width = IMAGE_SIZE; // We will scale the photo width to this
+  // const height = IMAGE_SIZE;
   const context = canvas.getContext("2d");
   canvas.width = width;
   canvas.height = height;
