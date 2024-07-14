@@ -33,23 +33,23 @@ function loadImages(dataDir) {
 }
 
 function loadData() {
-  console.debug('Loading images...');
+  console.log('Loading images...');
   trainData = loadImages(trainImagesDir);
   testData = loadImages(testImagesDir);
-  console.debug('Images loaded');
+  console.log('Images loaded');
 }
 
 function getTrainData() {
   return {
     images: tf.concat(trainData[0]),
-    labels: tf.oneHot(tf.tensor1d(trainData[1], 'float32'), 2) // last arg is the number of classes
+    labels: tf.oneHot(tf.tensor1d(trainData[1], 'int32'), 2) // last arg is the number of classes
   }
 }
 
 function getTestData() {
   return {
     images: tf.concat(testData[0]),
-    labels: tf.oneHot(tf.tensor1d(testData[1], 'float32'), 2),
+    labels: tf.oneHot(tf.tensor1d(testData[1], 'int32'), 2),
   }
 }
 
