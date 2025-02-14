@@ -16,6 +16,8 @@ Run the app, draw in the canvas using your mouse and download each of your drawi
 
 Label each image with its class name. For example, if you're building an image classification to recognise a square VS. a triange, label your images `0-square.png`, `1-square.png`, `2-square.png`, etc... and `0-triangle`, `1-triangle`, etc..
 
+Divide your img data into train and test samples - ~80% should go into the train set, the rest go into test
+
 ## Step 2: Build the model
 
 ```bash
